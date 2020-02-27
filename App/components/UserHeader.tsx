@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react'
-import { View, Image, Text, ViewStyle, TouchableOpacity } from 'react-native'
+import { View, Image, Text, ViewStyle, TouchableOpacity, StyleSheet } from 'react-native'
 import EStyleSheet from 'react-native-extended-stylesheet'
 import { colors } from '../utils/colors'
 import fonts from '../assets/fonts'
@@ -10,15 +10,25 @@ interface Props {
     user: UserData,
     date?: Date,
     style?: ViewStyle,
-    onPress: () => void
+    onPress: () => void,
+    testID? : string
 }
 
-export default function UserHeader({ user, date, style, onPress }: Props): ReactElement {
+export default function UserHeader({ user, date, style, onPress, testID }: Props): ReactElement {
     return (
-        <TouchableOpacity activeOpacity={0.75} style={[styles.header,style]} onPress={onPress}>
-            <Image style={styles.userAvatar} source={{ uri: user.avatar }} />
+        <TouchableOpacity testID={testID} activeOpacity={0.75} style={[styles.header, style]} onPress={onPress}>
+            {
+                user && user.avatar ?
+                    <Image style={styles.userAvatar} source={{ uri: user.avatar }} /> :
+                    null
+            }
+
             <View>
-                <Text style={styles.userTitle}>{user.name}</Text>
+                {
+                    user && user.name ?
+                        <Text style={styles.userTitle}>{user.name}</Text>
+                        : null
+                }
                 {
                     date ?
                         <Text style={[styles.userTitle, styles.createdStyle]}>{moment(date).fromNow()}</Text>
@@ -30,24 +40,24 @@ export default function UserHeader({ user, date, style, onPress }: Props): React
     )
 }
 
-const styles = EStyleSheet.create({
+const styles = StyleSheet.create({
     header: {
         flex: 1,
-        maxHeight: '55rem',
+        maxHeight: 55,
         flexDirection: 'row',
         alignItems: 'center',
     },
     userAvatar: {
         aspectRatio: 1,
         height: '100%',
-        borderRadius: '27.5rem',
+        borderRadius: 27.5,
         resizeMode: 'contain',
     },
     userTitle: {
         color: colors.color1,
         fontFamily: fonts.sf_pro_display_bold,
-        fontSize: '13rem',
-        marginLeft: '15rem'
+        fontSize: 13,
+        marginLeft: 15
     },
     createdStyle: {
         color: colors.color2

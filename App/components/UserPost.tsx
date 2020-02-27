@@ -11,54 +11,62 @@ interface Props {
     post: PostData,
 }
 
-export default function UserPost({post}: Props): ReactElement {
+export default function UserPost({ post }: Props): ReactElement {
     return (
         <View style={styles.holder}>
             <View style={styles.mainContainer}>
-                <Image style={styles.image} source={{uri:post.image}}/>
-                <View style={styles.detailsInfo}>
-                    <Text style={styles.title}>{post.title}</Text>
-                    <Text style={styles.created}>{moment(post.createdAt).fromNow()}</Text>
-                </View>
+                {
+                    post && post.image ?
+                        <Image style={styles.image} source={{ uri: post.image }} /> : null
+                }
+
+                {
+                    post && post.title && post.createdAt ?
+                        <View style={styles.detailsInfo}>
+                            <Text style={styles.title}>{post.title}</Text>
+                            <Text style={styles.created}>{moment(post.createdAt).fromNow()}</Text>
+                        </View> : null
+                }
+
             </View>
-            <Divider style={styles.divider}/>
+            <Divider style={styles.divider} />
         </View>
     )
 }
 
 const styles = EStyleSheet.create({
-    holder:{
-        flex:1,
-        width:'100%',
+    holder: {
+        flex: 1,
+        width: '100%',
         height: '100rem',
-        marginTop:'30rem',
+        marginTop: '30rem',
     },
-    mainContainer:{
-        flex:1,
+    mainContainer: {
+        flex: 1,
         marginBottom: '16rem',
-        flexDirection:'row'
+        flexDirection: 'row'
     },
-    divider:{
-        width:'100%'
+    divider: {
+        width: '100%'
     },
-    image:{
-        aspectRatio:1,
-        width:undefined,
-        height:'100%',
-        resizeMode:'cover',
+    image: {
+        aspectRatio: 1,
+        width: undefined,
+        height: '100%',
+        resizeMode: 'cover',
         borderRadius: '4rem'
     },
-    detailsInfo:{
-        flex:1,
-        marginLeft:'15rem',
-        marginRight:'8rem'
+    detailsInfo: {
+        flex: 1,
+        marginLeft: '15rem',
+        marginRight: '8rem'
     },
-    title:{
+    title: {
         fontFamily: fonts.sf_pro_display_semibold,
         fontSize: '15rem',
         color: colors.color1,
     },
-    created:{
+    created: {
         fontFamily: fonts.sf_pro_display_medium,
         fontSize: '12rem',
         color: colors.color2,

@@ -1,0 +1,5 @@
+46cca205651f4862430fcb41fe8515bb
+module.exports = {
+      testUri: 
+        "../../../App/assets/images/heart.png"
+    };

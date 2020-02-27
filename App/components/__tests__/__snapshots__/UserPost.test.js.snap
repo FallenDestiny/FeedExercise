@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserHeader Rendering draw all the user post with data 1`] = `
+<View>
+  <View>
+    <Image
+      source={
+        Object {
+          "uri": "https://images.unsplash.com/photo-1582043725042-f3d1873eeadf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+        }
+      }
+    />
+    <View>
+      <Text>
+        Principal Identity Associate
+      </Text>
+      <Text>
+        9 days ago
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "#E4E4E499",
+          "height": 1,
+          "width": "80%",
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`UserHeader Rendering draw all the user post with description and createDate 1`] = `
+<View>
+  <View />
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "#E4E4E499",
+          "height": 1,
+          "width": "80%",
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`UserHeader Rendering draw all the user post with image only 1`] = `
+<View>
+  <View>
+    <Image
+      source={
+        Object {
+          "uri": "https://images.unsplash.com/photo-1582043725042-f3d1873eeadf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "#E4E4E499",
+          "height": 1,
+          "width": "80%",
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`UserHeader Rendering draw an empty header 1`] = `
+<View>
+  <View />
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "#E4E4E499",
+          "height": 1,
+          "width": "80%",
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;

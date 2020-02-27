@@ -26,7 +26,7 @@ const getAllPosts = ({max,offset,onError, onSucces}:GETPostsType) => {
             }
             const result = posts.slice(start, start + max)
             store.dispatch(addPosts(result))
-            onSucces ? onSucces(haveMore) : null
+            onSucces ? onSucces(haveMore,result) : null
         })
     }).catch(err => {
         onError ? onError(err) : null

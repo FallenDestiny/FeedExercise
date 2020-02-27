@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserHeader Rendering draw all the header data with date 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "row",
+      "maxHeight": 55,
+      "opacity": 1,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/bruno_mart/128.jpg",
+      }
+    }
+    style={
+      Object {
+        "aspectRatio": 1,
+        "borderRadius": 27.5,
+        "height": "100%",
+        "resizeMode": "contain",
+      }
+    }
+  />
+  <View>
+    <Text
+      style={
+        Object {
+          "color": "#151522",
+          "fontFamily": "SFProDisplay-Bold",
+          "fontSize": 13,
+          "marginLeft": 15,
+        }
+      }
+    >
+      Charles Hickle
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#151522",
+            "fontFamily": "SFProDisplay-Bold",
+            "fontSize": 13,
+            "marginLeft": 15,
+          },
+          Object {
+            "color": "#999999",
+          },
+        ]
+      }
+    >
+      9 days ago
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`UserHeader Rendering draw all the header data without date 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "row",
+      "maxHeight": 55,
+      "opacity": 1,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://s3.amazonaws.com/uifaces/faces/twitter/bruno_mart/128.jpg",
+      }
+    }
+    style={
+      Object {
+        "aspectRatio": 1,
+        "borderRadius": 27.5,
+        "height": "100%",
+        "resizeMode": "contain",
+      }
+    }
+  />
+  <View>
+    <Text
+      style={
+        Object {
+          "color": "#151522",
+          "fontFamily": "SFProDisplay-Bold",
+          "fontSize": 13,
+          "marginLeft": 15,
+        }
+      }
+    >
+      Charles Hickle
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`UserHeader Rendering draw an empty header 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "row",
+      "maxHeight": 55,
+      "opacity": 1,
+    }
+  }
+>
+  <View />
+</View>
+`;

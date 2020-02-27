@@ -35,17 +35,18 @@ class UserAccount extends Component<Props, State> {
         return (
             <SafeAreaView style={theme.mainView}>
                 <ScrollView>
-                    <Image style={styles.avatarImg} source={{ uri: current_user.avatar }} />
-                    <Text style={styles.username}>{current_user.name}</Text>
-                    <Text style={styles.description}>{current_user.description}</Text>
+                    <Image testID={'userIcon'} style={styles.avatarImg} source={{ uri: current_user.avatar }} />
+                    <Text testID={'username'} style={styles.username}>{current_user.name}</Text>
+                    <Text testID={'userDescription'} style={styles.description}>{current_user.description}</Text>
                     <Divider />
-                    <View style={styles.userInfoView}>
+                    <View testID={'userInfo'} style={styles.userInfoView}>
                         <UserInfoView title={'Followers'} value={current_user.followers.toString()} style={styles.userInfo} />
                         <UserInfoView title={'Followings'} value={current_user.followings.toString()} style={styles.userInfo} />
                     </View>
                     <Divider />
                     <Text style={styles.posts}>Posts</Text>
                     <FlatList
+                        testID={'userPostsList'}
                         data={current_user.posts}
                         keyExtractor={post => post.id.toString()}
                         renderItem={this.renderPost}

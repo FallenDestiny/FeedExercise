@@ -1,0 +1,14 @@
+ebd66925b4d215d437cc44c7acb0e60f
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _api = _interopRequireDefault(require("./api"));
+
+var _default = new _api.default();
+
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbIkFwaSJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUlBOztlQUNlLElBQUlBLFlBQUosRSIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogRXh0ZW5kZWQgU3R5bGVTaGVldFxuICovXG5cbmltcG9ydCBBcGkgZnJvbSAnLi9hcGknO1xuZXhwb3J0IGRlZmF1bHQgbmV3IEFwaSgpO1xuIl19

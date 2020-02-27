@@ -48,7 +48,7 @@ class Feed extends Component<Props, State> {
     renderPostCell = (e) =>{
         const {item,index} = e
         return(
-            <PostCell post={item} onPress={() => this.onItemSelect(item)} onUserPress={() => this.onUserSelected(item.user_id[0])}/>
+            <PostCell testID={'postCell' + index} post={item} onPress={() => this.onItemSelect(item)} onUserPress={() => this.onUserSelected(item.user_id[0])}/>
         )
     }
 
@@ -81,6 +81,7 @@ class Feed extends Component<Props, State> {
         return (
             <SafeAreaView style={theme.mainView}>
                 <FlatList
+                    testID={'flatListFeed'}
                     data={this.props.feed_posts}
                     keyExtractor={post => post.id.toString()}
                     renderItem={this.renderPostCell}
@@ -94,7 +95,7 @@ class Feed extends Component<Props, State> {
                         <View style={{height: 35}}>
                             {
                                 this.state.isLoading ? 
-                                <ActivityIndicator color={colors.color1}/>
+                                <ActivityIndicator testID={'loadingActivity'} color={colors.color1}/>
                                 : null
                             }
                         </View>

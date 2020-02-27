@@ -33,13 +33,13 @@ class PostReview extends Component<Props> {
         return (
             <SafeAreaView style={theme.mainView}>
                 <ScrollView>
-                    <Image style={styles.imageHeader} source={{ uri: post.image }} />
-                    <UserHeader user={post.user_id[0]} date={post.createdAt} style={styles.headerStyle} onPress={() => this.openUser(post.user_id[0])}/>
-                    <View style={styles.infoView}>
+                    <Image testID={'postImage'} style={styles.imageHeader} source={{ uri: post.image }} />
+                    <UserHeader testID={'userHeader'} user={post.user_id[0]} date={post.createdAt} style={styles.headerStyle} onPress={() => this.openUser(post.user_id[0])}/>
+                    <View testID={'postInfo'} style={styles.infoView}>
                         <InfoView icon={images.heart} text={post.likes.toString()} style={styles.info}/>
                         <InfoView icon={images.message_circle} text={post.comments.toString()} style={styles.info}/>
                     </View>
-                    <Text style={styles.textBody}>{post.description}</Text>
+                    <Text testID={'postBody'} style={styles.textBody}>{post.description}</Text>
                 </ScrollView>
                     
                 
